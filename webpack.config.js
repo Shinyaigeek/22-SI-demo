@@ -4,11 +4,6 @@ const HTMLWebpackMultiBuildPlugin = require("html-webpack-multi-build-plugin");
 
 require("dotenv").config();
 
-const template =
-  process.env.LEGACY === "true"
-    ? require.resolve("html-webpack-multi-build-plugin/template.ejs")
-    : require.resolve("html-webpack-plugin/default_index.ejs");
-
 module.exports = function (env) {
   return {
     mode: "production",
@@ -43,11 +38,6 @@ module.exports = function (env) {
           use: [
             {
               loader: "ts-loader",
-              options: {
-                compilerOptions: {
-                  target: process.env.LEGACY === "true" ? "ES5" : "ES2015",
-                },
-              },
             },
           ],
         },
