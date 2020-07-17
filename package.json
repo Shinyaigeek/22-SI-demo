@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "yarn run prepare && webpack",
-    "dev": "yarn run prepare && webpack-dev-server",
+    "build": "webpack",
+    "dev": "webpack-dev-server",
     "prepare": "ts-node src/ci_scripts/makeRouting/index.ts"
   },
   "repository": {

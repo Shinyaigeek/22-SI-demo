@@ -1,7 +1,9 @@
 import * as React from "react";
 
-import { blogs } from "../../../public/items"
+import { blogs } from "../../../routing/items"
 import { getRoute } from "../../scripts/getRoute";
+
+
 
 
 export const Post:React.FC<{}> =() => {
