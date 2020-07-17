@@ -10,7 +10,7 @@
         "dest": "index.html"
       },
       {
-        "src": "/post/(*)",
+        "src": "/post/(.*)",
         "dest": "index.html"
       }
     ]
