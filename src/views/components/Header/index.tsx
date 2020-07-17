@@ -22,7 +22,7 @@ export const Header:React.FC<{}> = () => {
     }, [])
 
     return <header style={{
-        background: posTop < 72 ? "transparent" : "blue"
+        background: posTop < 32 ? "transparent" : "blue"
     }}>
         サマーインターン前につよつよになろう！！
     </header>
