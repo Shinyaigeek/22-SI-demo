@@ -70,8 +70,7 @@ module.exports = function (env) {
         filename: "index.html",
         template: "src/index.html",
         publicPath: "/",
-      }),
-      new HTMLWebpackMultiBuildPlugin()
+      })
     ],
   };
 };
