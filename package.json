@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "yarn run build:modern",
-    "build:modern": "webpack",
+    "build": "webpack",
     "dev": "webpack-dev-server"
   },
   "repository": {

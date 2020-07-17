@@ -26,11 +26,7 @@ module.exports = function (env) {
       rules: [
         {
           test: /\.tsx?$/,
-          use: [
-            {
-              loader: "ts-loader",
-            },
-          ],
+          loader: "ts-loader"
         },
         {
           test: /\.scss$/,
