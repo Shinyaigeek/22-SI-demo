@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.(jpeg|png|jpg|gif)$/,
-        loader: "url-loader"
+        loader: "file-loader"
       },
       {
         test: /\.(md)$/,
