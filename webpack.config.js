@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "none", 
+  mode: "production", 
   entry: {
     main: "./src/app.tsx",
   },
@@ -11,7 +11,7 @@ module.exports = {
     publicPath: "/"
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json", ".png"],
+    extensions: [".ts", ".tsx", ".js", ".json", ".png", ".jpg"],
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),

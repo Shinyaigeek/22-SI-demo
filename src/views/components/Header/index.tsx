@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import "./header.scss"
+import { Link } from "react-router-dom";
 
 export const Header:React.FC<{}> = () => {
 
@@ -21,7 +22,7 @@ export const Header:React.FC<{}> = () => {
     }, [])
 
     return <header style={{
-        background: posTop < 72 ? "transparent" : "blue"
+        background: posTop < 32 ? "transparent" : "blue"
     }}>
         サマーインターン前につよつよになろう！！
     </header>
