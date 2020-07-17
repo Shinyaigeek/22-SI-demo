@@ -11,7 +11,7 @@ module.exports = {
     publicPath: "/"
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".json", ".png"],
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
