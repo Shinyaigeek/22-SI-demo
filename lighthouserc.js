@@ -14,6 +14,7 @@ module.exports = {
         "uses-webp-images": "off",
         "unused-javascript": "off",
         "meta-viewport": "off",
+        "unminified-javascript": "off",
         "first-meaningful-paint": "off",
         "max-potential-fid": "off"
       }

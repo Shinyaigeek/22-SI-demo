@@ -2,11 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "none", 
   entry: {
     main: "./src/app.tsx",
   },
   output: {
-    path: path.join(__dirname, "public")
+    path: path.join(__dirname, "public"),
+    publicPath: "/"
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
@@ -14,6 +16,8 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     port: 3030,
+    hot: true,
+    historyApiFallback:true
   },
   module: {
     rules: [
@@ -25,17 +29,21 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
-      // {
-      //   test: /\.(jpeg|png|jpg|gif)$/,
-      //   loader: "file-loader"
-      // }
+      {
+        test: /\.(jpeg|png|jpg|gif)$/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.(md)$/,
+        loader: "raw-loader"
+      }
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      chunks: ["main"],
       filename: "index.html",
       template: "src/index.html",
+      publicPath: "/",
     }),
   ],
 };
