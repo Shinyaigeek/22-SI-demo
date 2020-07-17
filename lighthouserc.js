@@ -13,7 +13,8 @@ module.exports = {
         "offscreen-images": "off",
         "uses-webp-images": "off",
         "unused-javascript": "off",
-        "meta-viewport": "off"
+        "meta-viewport": "off",
+        "unminified-javascript": "off"
       }
     },
     "upload": {
