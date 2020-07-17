@@ -1,8 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HTMLWebpackMultiBuildPlugin = require("html-webpack-multi-build-plugin");
-
-require("dotenv").config();
 
 module.exports = function (env) {
   return {
@@ -13,14 +10,8 @@ module.exports = function (env) {
     output: {
       path: path.join(__dirname, "public"),
       publicPath: "/",
-      filename:
-        process.env.LEGACY === "true"
-          ? "[name].legacy.bundle.js"
-          : "[name].modern.bundle.js",
-      chunkFilename:
-        process.env.LEGACY === "true"
-          ? "[name].legacy.bundle.js"
-          : "[name].modern.bundle.js",
+      filename: "[name].bundle.js",
+      chunkFilename: "[name].bundle.js"
     },
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".json", ".png", ".jpg"],
