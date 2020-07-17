@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "none", 
   entry: {
     main: "./src/app.tsx",
   },
@@ -28,10 +29,14 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
-      // {
-      //   test: /\.(jpeg|png|jpg|gif)$/,
-      //   loader: "file-loader"
-      // }
+      {
+        test: /\.(jpeg|png|jpg|gif)$/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.(md)$/,
+        loader: "raw-loader"
+      }
     ],
   },
   plugins: [
