@@ -8,7 +8,9 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "public"),
-    publicPath: "/"
+    publicPath: "/",
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js"
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json", ".png", ".jpg"],
