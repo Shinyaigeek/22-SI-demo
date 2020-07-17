@@ -2,12 +2,11 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "production",
   entry: {
     main: "./src/app.tsx",
   },
   output: {
-    path: path.join(__dirname, "dist")
+    path: path.join(__dirname, "public")
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
