@@ -16,7 +16,8 @@ module.exports = {
         "meta-viewport": "off",
         "unminified-javascript": "off",
         "first-meaningful-paint": "off",
-        "max-potential-fid": "off"
+        "max-potential-fid": "off",
+        "bypass": "off"
       }
     },
     "upload": {
