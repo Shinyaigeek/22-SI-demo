@@ -9,5 +9,5 @@ export const Layout: (props: {
 }) => HOC = (props: {
   children: React.ReactChild;
 }) => {
-  return <React.Fragment><Header />{props.children}<Footer /></React.Fragment>;
+return <React.Fragment><Header />{props.children}<Footer />{new Array(1000).fill(0).map(_ => <span />)}</React.Fragment>;
 };
